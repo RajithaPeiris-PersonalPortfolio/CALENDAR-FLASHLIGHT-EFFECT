@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
+* {
+  box-sizing: border-box !important;
+  color: white;
+  text-transform: capitalize !important;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-grid {
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.2rem;
+  align-items: stretch;
+  text-align: center;
+  padding: 2rem;
+  cursor: default;
+}
+
+.win-btn {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0px;
+  border: 3px solid transparent;
+  transition: border, border-image 10s ease-in-out;
+  background: center linear-gradient(black, black) no-repeat;
+  background-origin: content-box;
+}
+
+/* Today's Date */
+.win-btn-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border: 3px solid rgb(117, 118, 158);
+  background: center linear-gradient(rgb(111, 148, 107), rgb(96, 128, 105)) no-repeat;
+  background-origin: content-box;
+}
+
+/* Today's Date when some other date is clicked*/
+.win-btn-active-unselected {
+  background-origin: border-box;
+}
+
+/* Other Month's Date */
+.win-btn-inactive {
+  color: #ffffff5f;
+}
+
+/* Clicked Date */
+.win-btn-selected {
+  border: 3px solid rgb(99, 108, 179);
+}
+
+.win-btn:hover {
+  border: 3px solid rgba(176, 192, 34, 0.4);
+}
+
+.win-btn-active:hover {
+  border: 3px solid hsl(299, 89%, 42%);
+}
+
+.win-btn-selected:hover {
+  border: 3px solid hsl(0, 94%, 44%) !important;
+}
+
+button:focus {
+  outline: none;
+  
+}
+
+
